@@ -1,0 +1,87 @@
+-- Creare baza de date
+CREATE DATABASE catalog;
+
+-- Folosirea bazei de date
+USE catalog;
+
+-- Cicluri de învățământ
+CREATE TABLE cicluri (
+    ID_Ciclu INT PRIMARY KEY,
+    NumeCiclu VARCHAR(50)
+);
+
+-- Programe de studii
+CREATE TABLE specializari (
+    ID_Program INT PRIMARY KEY,
+    NumeProgram VARCHAR(50),
+    ID_Ciclu INT,
+    FOREIGN KEY (ID_Ciclu) REFERENCES cicluri(ID_Ciclu)
+);
+
+--  Ani de studii
+CREATE TABLE ani (
+    ID_An INT PRIMARY KEY,
+    NumeAn VARCHAR(50),
+    ID_Program INT,
+    FOREIGN KEY (ID_Program) REFERENCES specializari(ID_Program)
+);
+
+--  Planuri de învățământ / Discipline
+CREATE TABLE planuri (
+    ID_Disciplina INT PRIMARY KEY,
+    NumeDisciplina VARCHAR(50),
+    AcronimDisciplina VARCHAR(10),
+    NumarCredite INT,
+    ID_An INT,
+    FOREIGN KEY (ID_An) REFERENCES ani(ID_An)
+);
+
+-- Studenți
+CREATE TABLE studenti (
+    ID_Student INT PRIMARY KEY,
+    NumarMatricol VARCHAR(20),
+    NumeStudent VARCHAR(50),
+    PrenumeStudent VARCHAR(50),
+    InitialaTata VARCHAR(1),
+    CNP VARCHAR(13),
+    DataInscriere DATE,
+    ID_Ciclu INT,
+    MediaInscriere FLOAT,
+    FOREIGN KEY (ID_Ciclu) REFERENCES cicluri(ID_Ciclu)
+);
+
+-- grupe
+CREATE TABLE grupe (
+    ID_Grupa INT PRIMARY KEY,
+    NumeGrupa VARCHAR(50),
+    ID_An INT,
+    FOREIGN KEY (ID_An) REFERENCES ani(ID_An)
+);
+
+--  Cadre didactice
+CREATE TABLE cadre (
+    ID_CadruDidactic INT PRIMARY KEY,
+    NumeCadruDidactic VARCHAR(50),
+    PrenumeCadruDidactic VARCHAR(50),
+    MarcaAngajat VARCHAR(20),
+    Titlu VARCHAR(10),
+    Post VARCHAR(50)
+);
+
+--  utilizatori
+CREATE TABLE utilizatori (
+    ID_Utilizator INT PRIMARY KEY,
+    NumeUtilizator VARCHAR(50),
+    ParolaUtilizator VARCHAR(50),
+    ProfilUtilizator VARCHAR(50)
+);
+
+-- cataloage / note
+CREATE TABLE cataloage (
+    ID_Catalog INT PRIMARY KEY,
+    ID_Student INT,
+    ID_Disciplina INT,
+    Nota INT,
+    FOREIGN KEY (ID_Student) REFERENCES studenti(ID_Student),
+    FOREIGN KEY (ID_Disciplina) REFERENCES planuri(ID_Disciplina)
+);
