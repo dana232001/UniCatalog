@@ -1,4 +1,4 @@
-namespace Aplicatie
+namespace poo_app
 {
     internal static class Program
     {

@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Dana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Dana\\Aplicatie\\Aplicatie.csproj",
-      "projectName": "Aplicatie",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Dana\\Aplicatie\\Aplicatie.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Dana\\Aplicatie\\obj\\",
+      "projectUniqueName": "D:\\proi_poo\\poo_app\\poo_app.csproj",
+      "projectName": "poo_app",
+      "projectPath": "D:\\proi_poo\\poo_app\\poo_app.csproj",
+      "packagesPath": "C:\\Users\\Dana\\.nuget\\packages\\",
+      "outputPath": "D:\\proi_poo\\poo_app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
