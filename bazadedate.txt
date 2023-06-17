@@ -1,8 +1,8 @@
 -- Creare baza de date
-CREATE DATABASE catalog;
+CREATE DATABASE unitbv;
 
 -- Folosirea bazei de date
-USE catalog;
+USE unitbv;
 
 -- Cicluri de învățământ
 CREATE TABLE cicluri (
