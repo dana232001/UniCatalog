@@ -48,6 +48,7 @@
             Cicluri_inv_buton.TabIndex = 0;
             Cicluri_inv_buton.Text = "Cicluri de invatamant";
             Cicluri_inv_buton.UseVisualStyleBackColor = false;
+            Cicluri_inv_buton.Click += Cicluri_inv_buton_Click;
             // 
             // _studii_buton
             // 
@@ -136,7 +137,6 @@
             Controls.Add(Cicluri_inv_buton);
             Name = "Meniu_Principal";
             Text = "Main Menu";
-            
             ResumeLayout(false);
         }
 

@@ -17,6 +17,10 @@ namespace Aplicatie
             InitializeComponent();
         }
 
-       
+        private void Cicluri_inv_buton_Click(object sender, EventArgs e)
+        {
+            Cicluri_main ciclu_invatamant = new Cicluri_main();
+            ciclu_invatamant.Show();
+        }
     }
 }

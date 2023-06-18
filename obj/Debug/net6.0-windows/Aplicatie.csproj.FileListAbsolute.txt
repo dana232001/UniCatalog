@@ -34,3 +34,5 @@ C:\Users\ghene\Desktop\aplicatiePOO\bin\Debug\net6.0-windows\runtimes\win-x64\na
 C:\Users\ghene\Desktop\aplicatiePOO\bin\Debug\net6.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\ghene\Desktop\aplicatiePOO\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\ghene\Desktop\aplicatiePOO\obj\Debug\net6.0-windows\Aplicatie.csproj.CopyComplete
+C:\Users\ghene\Desktop\aplicatiePOO\obj\Debug\net6.0-windows\Aplicatie.Cicluri_main.resources
+C:\Users\ghene\Desktop\aplicatiePOO\obj\Debug\net6.0-windows\Aplicatie.Adauga_Ciclu.resources

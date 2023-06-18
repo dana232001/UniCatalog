@@ -3,7 +3,6 @@ using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-//using MySql.Data.MySqlClient;
 namespace Aplicatie
 {
     public partial class Form1 : Form
