@@ -1,4 +1,4 @@
-namespace poo_app
+namespace Aplicatie
 {
     public partial class Form1 : Form
     {
@@ -34,7 +34,7 @@ namespace poo_app
             }
             else
             {
-                MessageBox.Show("error");
+                MessageBox.Show("error");   //rcytvub
             }
         }
     }

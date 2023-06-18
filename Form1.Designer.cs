@@ -1,4 +1,4 @@
-﻿namespace poo_app
+﻿namespace Aplicatie
 {
     partial class Form1
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pictureBox1 = new PictureBox();
             PASSWORD = new Label();
             label2 = new Label();
@@ -41,10 +42,10 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.unitbv;
-            pictureBox1.Location = new Point(17, 24);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(93, 103);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(223, 225);
+            pictureBox1.Size = new Size(132, 138);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
