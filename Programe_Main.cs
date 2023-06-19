@@ -1,5 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Crypto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,57 +8,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Aplicatie
 {
-    public partial class Adauga_Ciclu : Form
+    public partial class Programe_Main : Form
     {
-        public Adauga_Ciclu()
+        public Programe_Main()
         {
             InitializeComponent();
         }
 
-        private void button_ok_ciclu_inv_Click(object sender, EventArgs e)
+        private void Programe_Load(object sender, EventArgs e)
         {
-            string idc = textBox_id.Text;
-            string nume = textBox_nume.Text;
-            int er = 0;
             using (MySqlConnection connection = new MySqlConnection(Global.connectionString))
             {
                 if (connection != null)
                 {
                     try
                     {
-                        string query = "INSERT INTO cicluri(ID_Ciclu,NumeCiclu) Values('" + idc + "','" + nume + "');";
+                        string query = "SELECT ID_Program,NumeProgram,ID_Ciclu FROM specializari";
 
                         MySqlCommand command = new MySqlCommand(query, connection);
 
                         connection.Open();
+
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
-
+                            dataGridView1.Rows.Clear();
                             while (reader.Read())
                             {
-                                string idCiclu = reader.GetString(0);
-                                string numec = reader.GetString(1);
-                                string listItem = string.Format("ID Ciclu: {0} - Nume: {1}", idCiclu, numec);
+                                int idprogram = reader.GetInt32(0);
+                                string nume_program = reader.GetString(1);
+                                int id_ciclu = reader.GetInt32(2);
+                                dataGridView1.Rows.Add(idprogram, nume_program, id_ciclu);
                             }
                         }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("A apărut o eroare: " + ex.Message);
-                        er++;
                     }
                     finally
                     {
                         connection.Close();
-                    }
-                    if (er == 0)
-                    {
-                        MessageBox.Show("Ciclu adaugat");
-                        textBox_nume.Text = "";
                     }
                 }
                 else
@@ -67,10 +58,21 @@ namespace Aplicatie
                     MessageBox.Show("Conexiunea la baza de date nu a putut fi stabilită!");
                 }
             }
+
         }
 
+        private void button_adaugare_program_studii_Click(object sender, EventArgs e)
+        {
+            Programe_Adaugare add_program = new Programe_Adaugare();
+            add_program.FormClosing += new FormClosingEventHandler(this.Programe_Load);
+            add_program.ShowDialog();
+        }
+
+        private void button_stergere_program_studii_Click(object sender, EventArgs e)
+        {
+            Programe_Stergere delete_program = new Programe_Stergere();
+            delete_program.FormClosing += new FormClosingEventHandler(this.Programe_Load);
+            delete_program.ShowDialog();
+        }
     }
 }
-
-
-

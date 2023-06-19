@@ -28,5 +28,17 @@ namespace Aplicatie
             Note_Main note=new Note_Main();
             note.Show();
         }
+
+        private void _studii_buton_Click(object sender, EventArgs e)
+        {
+            Programe_Main programe = new Programe_Main();
+            programe.Show();
+        }
+
+        private void Anii_studiu_buton_Click(object sender, EventArgs e)
+        {
+            Anii_Studiu_Main anii_de_studiu = new Anii_Studiu_Main();
+            anii_de_studiu.Show();
+        }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Crypto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,21 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Aplicatie
 {
-    public partial class Adauga_Ciclu : Form
+    public partial class Programe_Adaugare : Form
     {
-        public Adauga_Ciclu()
+        public Programe_Adaugare()
         {
             InitializeComponent();
         }
 
-        private void button_ok_ciclu_inv_Click(object sender, EventArgs e)
+        private void button_salvare_adg_program_Click(object sender, EventArgs e)
         {
-            string idc = textBox_id.Text;
-            string nume = textBox_nume.Text;
+            string idp = id_program.Text;
+            string nume = nume_program.Text;
+            string idc=id_ciclu.Text;
             int er = 0;
             using (MySqlConnection connection = new MySqlConnection(Global.connectionString))
             {
@@ -31,7 +30,7 @@ namespace Aplicatie
                 {
                     try
                     {
-                        string query = "INSERT INTO cicluri(ID_Ciclu,NumeCiclu) Values('" + idc + "','" + nume + "');";
+                        string query = "INSERT INTO specializari(ID_Program,NumeProgram,ID_Ciclu) Values('" + idp + "','" + nume + "','"+idc+"');";
 
                         MySqlCommand command = new MySqlCommand(query, connection);
 
@@ -41,9 +40,10 @@ namespace Aplicatie
 
                             while (reader.Read())
                             {
-                                string idCiclu = reader.GetString(0);
-                                string numec = reader.GetString(1);
-                                string listItem = string.Format("ID Ciclu: {0} - Nume: {1}", idCiclu, numec);
+                                string idprogram = reader.GetString(0);
+                                string numeprogram = reader.GetString(1);
+                                string idciclu=reader.GetString(2);
+                                string listItem = string.Format("ID Program: {0} - Nume: {1} - ID Ciclu: {2}", idprogram, numeprogram,idciclu);
                             }
                         }
                     }
@@ -58,8 +58,8 @@ namespace Aplicatie
                     }
                     if (er == 0)
                     {
-                        MessageBox.Show("Ciclu adaugat");
-                        textBox_nume.Text = "";
+                        MessageBox.Show("Program adaugat");
+                        nume_program.Text = "";
                     }
                 }
                 else
@@ -67,10 +67,7 @@ namespace Aplicatie
                     MessageBox.Show("Conexiunea la baza de date nu a putut fi stabilită!");
                 }
             }
-        }
-
+        
+    }
     }
 }
-
-
-

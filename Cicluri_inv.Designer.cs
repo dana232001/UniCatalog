@@ -40,7 +40,7 @@
             // button_cicluri_adaugare
             // 
             button_cicluri_adaugare.Font = new Font("Century", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button_cicluri_adaugare.Location = new Point(226, 281);
+            button_cicluri_adaugare.Location = new Point(145, 281);
             button_cicluri_adaugare.Name = "button_cicluri_adaugare";
             button_cicluri_adaugare.Size = new Size(214, 75);
             button_cicluri_adaugare.TabIndex = 0;
@@ -52,11 +52,11 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, Nume });
-            dataGridView1.Location = new Point(174, 92);
+            dataGridView1.Location = new Point(12, 66);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(325, 154);
+            dataGridView1.Size = new Size(501, 209);
             dataGridView1.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -91,8 +91,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.SeaShell;
-            ClientSize = new Size(723, 401);
+            BackColor = Color.Ivory;
+            ClientSize = new Size(537, 431);
             Controls.Add(dataGridView1);
             Controls.Add(button_cicluri_adaugare);
             Name = "Cicluri_main";

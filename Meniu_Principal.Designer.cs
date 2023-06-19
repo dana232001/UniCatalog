@@ -60,6 +60,7 @@
             _studii_buton.TabIndex = 1;
             _studii_buton.Text = "Programe de studii";
             _studii_buton.UseVisualStyleBackColor = false;
+            _studii_buton.Click += _studii_buton_Click;
             // 
             // Anii_studiu_buton
             // 
@@ -70,6 +71,7 @@
             Anii_studiu_buton.TabIndex = 2;
             Anii_studiu_buton.Text = "Anii de studiu";
             Anii_studiu_buton.UseVisualStyleBackColor = true;
+            Anii_studiu_buton.Click += Anii_studiu_buton_Click;
             // 
             // Discipline_buton
             // 
@@ -126,7 +128,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.PeachPuff;
+            BackColor = Color.Ivory;
             ClientSize = new Size(800, 450);
             Controls.Add(Note_buton);
             Controls.Add(Cadre_buton);

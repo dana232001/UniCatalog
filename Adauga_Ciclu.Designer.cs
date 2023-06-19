@@ -57,7 +57,7 @@
             // 
             textBox_id.Location = new Point(164, 165);
             textBox_id.Name = "textBox_id";
-            textBox_id.Size = new Size(125, 27);
+            textBox_id.Size = new Size(152, 27);
             textBox_id.TabIndex = 2;
             // 
             // textBox_nume
@@ -81,6 +81,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Ivory;
             ClientSize = new Size(387, 468);
             Controls.Add(button_ok_ciclu_inv);
             Controls.Add(textBox_nume);

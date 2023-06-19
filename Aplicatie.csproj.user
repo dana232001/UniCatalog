@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Adaugare_Anii.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Adauga_Ciclu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Anii_Studiu_Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Cicluri_inv.cs">
@@ -20,6 +26,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Note_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Programe_Adaugare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Programe_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Programe_Stergere.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
