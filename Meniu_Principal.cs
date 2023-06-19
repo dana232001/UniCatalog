@@ -25,7 +25,7 @@ namespace Aplicatie
 
         private void Note_buton_Click(object sender, EventArgs e)
         {
-            Note_Main note=new Note_Main();
+            Note_Main note = new Note_Main();
             note.Show();
         }
 
@@ -39,6 +39,13 @@ namespace Aplicatie
         {
             Anii_Studiu_Main anii_de_studiu = new Anii_Studiu_Main();
             anii_de_studiu.Show();
+        }
+
+        private void Studenti_buton_Click(object sender, EventArgs e)
+        {
+            Studenti_Main student = new Studenti_Main();
+            student.Show();
+
         }
     }
 }

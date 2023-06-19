@@ -92,6 +92,7 @@
             Studenti_buton.TabIndex = 4;
             Studenti_buton.Text = "Studenti";
             Studenti_buton.UseVisualStyleBackColor = true;
+            Studenti_buton.Click += Studenti_buton_Click;
             // 
             // Grupe_buton
             // 
