@@ -37,7 +37,9 @@
             Text1 = new Label();
             userbox = new TextBox();
             passbox = new TextBox();
+            pictureBox_load = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_load).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -116,12 +118,26 @@
             passbox.Size = new Size(273, 27);
             passbox.TabIndex = 7;
             // 
+            // pictureBox_load
+            // 
+            pictureBox_load.BackColor = Color.Transparent;
+            pictureBox_load.BackgroundImageLayout = ImageLayout.None;
+            pictureBox_load.Image = (Image)resources.GetObject("pictureBox_load.Image");
+            pictureBox_load.Location = new Point(655, 279);
+            pictureBox_load.Name = "pictureBox_load";
+            pictureBox_load.Size = new Size(50, 50);
+            pictureBox_load.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_load.TabIndex = 8;
+            pictureBox_load.TabStop = false;
+            pictureBox_load.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PeachPuff;
             ClientSize = new Size(776, 381);
+            Controls.Add(pictureBox_load);
             Controls.Add(passbox);
             Controls.Add(userbox);
             Controls.Add(Text1);
@@ -133,6 +149,7 @@
             Name = "Form1";
             Text = "POO";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_load).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -147,5 +164,6 @@
         private Label Text1;
         private TextBox userbox;
         private TextBox passbox;
+        private PictureBox pictureBox_load;
     }
 }

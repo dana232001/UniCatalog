@@ -29,7 +29,7 @@ namespace Aplicatie
 
         private void Sign_in_Click(object sender, EventArgs e)
         {
-
+            pictureBox_load.Visible = true;
             string user = userbox.Text;
             string pass = passbox.Text;
             using (MySqlConnection connection = new MySqlConnection(Global.connectionString))
@@ -107,12 +107,13 @@ namespace Aplicatie
             }
 
         }
+
     }
-    }
+}
 
 
-    public static class Global
-    {
-        public const string connectionString = "server=www.db4free.net;port=3306;database=poolms;user=admincatalog;password=poolms123;";
-        public static string utilizator = "";
-    }
+public static class Global
+{
+    public const string connectionString = "server=www.db4free.net;port=3306;database=poolms;user=admincatalog;password=poolms123;";
+    public static string utilizator = "";
+}
