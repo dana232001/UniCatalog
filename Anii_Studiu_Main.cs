@@ -36,10 +36,10 @@ namespace Aplicatie
                             dataGridView1.Rows.Clear();
                             while (reader.Read())
                             {
-                                int id_an= reader.GetInt32(0);
+                                int id_an = reader.GetInt32(0);
                                 string nume_an = reader.GetString(1);
-                                int id_program= reader.GetInt32(2);
-                                dataGridView1.Rows.Add(id_an, nume_an,id_program);
+                                int id_program = reader.GetInt32(2);
+                                dataGridView1.Rows.Add(id_an, nume_an, id_program);
                             }
                         }
                     }
@@ -65,6 +65,13 @@ namespace Aplicatie
             Adaugare_Anii add_ani = new Adaugare_Anii();
             add_ani.FormClosing += new FormClosingEventHandler(this.Ani_Load);
             add_ani.ShowDialog();
+        }
+
+        private void stergere_an_button_Click(object sender, EventArgs e)
+        {
+            An_studiu_stergere sterge_an=new An_studiu_stergere();
+            sterge_an.FormClosing += new FormClosingEventHandler(this.Ani_Load);
+            sterge_an.ShowDialog();
         }
     }
 }

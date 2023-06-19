@@ -94,6 +94,7 @@
             buton_ok_adaugare.TabIndex = 6;
             buton_ok_adaugare.Text = "Ok";
             buton_ok_adaugare.UseVisualStyleBackColor = true;
+            buton_ok_adaugare.Click += buton_ok_adaugare_Click;
             // 
             // Adaugare_Anii
             // 

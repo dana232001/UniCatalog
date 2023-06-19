@@ -89,6 +89,7 @@
             stergere_an_button.TabIndex = 2;
             stergere_an_button.Text = "Stergere an de studiu";
             stergere_an_button.UseVisualStyleBackColor = true;
+            stergere_an_button.Click += stergere_an_button_Click;
             // 
             // Anii_Studiu_Main
             // 

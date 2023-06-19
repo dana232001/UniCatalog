@@ -10,6 +10,9 @@
     <Compile Update="Anii_Studiu_Main.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="An_studiu_stergere.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Cicluri_inv.cs">
       <SubType>Form</SubType>
     </Compile>

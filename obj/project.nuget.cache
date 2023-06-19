@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rhn/ll8/pUUJJz47pQ3CaS7czWJD1mkpt5bEw1vnsBi9YiJsKacYNIJNow38kj1cHcyDdSj+d5YvJT8aXMNQ+Q==",
+  "dgSpecHash": "2yTA2SoFcTpbui4+PmnHWpCMS9Hn47HR6b81tpRQpRH21y6OCcfmqSoS6rlLt0bHZZXy7P1jyDL7ouTRpX/PwA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ghene\\Desktop\\POO\\Aplicatie.csproj",
+  "projectFilePath": "C:\\Users\\ghene\\Desktop\\proiect\\Aplicatie.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ghene\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\ghene\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",
