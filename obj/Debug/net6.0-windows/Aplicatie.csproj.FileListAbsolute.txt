@@ -74,3 +74,5 @@ C:\Users\Admin\Desktop\poolms\obj\Debug\net6.0-windows\refint\Aplicatie.dll
 C:\Users\Admin\Desktop\poolms\obj\Debug\net6.0-windows\Aplicatie.pdb
 C:\Users\Admin\Desktop\poolms\obj\Debug\net6.0-windows\Aplicatie.genruntimeconfig.cache
 C:\Users\Admin\Desktop\poolms\obj\Debug\net6.0-windows\ref\Aplicatie.dll
+C:\Users\Admin\Desktop\poolms\obj\Debug\net6.0-windows\Aplicatie.Note_Main.resources
+C:\Users\Admin\Desktop\poolms\obj\Debug\net6.0-windows\Aplicatie.Note_Adaugare.resources

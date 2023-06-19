@@ -22,5 +22,11 @@ namespace Aplicatie
             Cicluri_main ciclu_invatamant = new Cicluri_main();
             ciclu_invatamant.Show();
         }
+
+        private void Note_buton_Click(object sender, EventArgs e)
+        {
+            Note_Main note=new Note_Main();
+            note.Show();
+        }
     }
 }

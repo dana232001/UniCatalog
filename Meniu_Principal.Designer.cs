@@ -120,6 +120,7 @@
             Note_buton.TabIndex = 7;
             Note_buton.Text = "Note";
             Note_buton.UseVisualStyleBackColor = true;
+            Note_buton.Click += Note_buton_Click;
             // 
             // Meniu_Principal
             // 

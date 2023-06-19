@@ -29,9 +29,10 @@ namespace Aplicatie
 
         private void Sign_in_Click(object sender, EventArgs e)
         {
-            pictureBox_load.Visible = true;
+            
             string user = userbox.Text;
             string pass = passbox.Text;
+            pictureBox_load.Visible = true;
             using (MySqlConnection connection = new MySqlConnection(Global.connectionString))
             {
                 if (connection != null)
