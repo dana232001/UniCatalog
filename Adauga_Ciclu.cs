@@ -22,43 +22,51 @@ namespace Aplicatie
 
         private void button_ok_ciclu_inv_Click(object sender, EventArgs e)
         {
+            string idc = textBox_id.Text;
             string nume = textBox_nume.Text;
-            string id = textBox_id.Text;
             int er = 0;
-
-            using (MySqlConnection connection = new MySqlConnection(Global.connectionString))
-            {
-                if (connection != null)
+                using (MySqlConnection connection = new MySqlConnection(Global.connectionString))
                 {
-                    try
+                    if (connection != null)
                     {
-                        string query = "INSERT INTO cicluri(ID_Ciclu,NumeCiclu) Values(" + id + "," + nume + ");";
+                        try
+                        {
+                            string query = "INSERT INTO cicluri(ID_Ciclu,NumeCiclu) Values('" + idc + "','" + nume + "');";
 
-                        MySqlCommand command = new MySqlCommand(query, connection);
+                            MySqlCommand command = new MySqlCommand(query, connection);
 
-                        connection.Open();
+                            connection.Open();
+                            using (MySqlDataReader reader = command.ExecuteReader())
+                            {
 
+                                while (reader.Read())
+                                {
+                                    string idCiclu = reader.GetString(0);
+                                    string numec = reader.GetString(1);
+                                    string listItem = string.Format("ID Ciclu: {0} - Nume: {1}", idCiclu, numec);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("A apărut o eroare: " + ex.Message);
+                            er++;
+                        }
+                        finally
+                        {
+                            connection.Close();
+                        }
+                        if (er == 0)
+                        {
+                            MessageBox.Show("Ciclu adaugat");
+                            textBox_nume.Text = "";
+                        }
                     }
-
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show("A apărut o eroare: " + ex.Message);
-                        er++;
-                    }
-                    finally
-                    {
-                        connection.Close();
-                    }
-                    if (er == 0)
-                    {
-                        MessageBox.Show("Ciclu de invatamant adaugat!");
+                        MessageBox.Show("Conexiunea la baza de date nu a putut fi stabilită!");
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Conexiunea la baza de date nu a putut fi stabilită!");
-                }
-            }
         }
 
     }
