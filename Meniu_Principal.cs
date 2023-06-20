@@ -47,5 +47,24 @@ namespace Aplicatie
             student.Show();
 
         }
+
+        private void Discipline_buton_Click(object sender, EventArgs e)
+        {
+            Discipline discipline = new Discipline();
+            discipline.Show();
+        }
+
+        private void Grupe_buton_Click(object sender, EventArgs e)
+        {
+            Grupe grupe = new Grupe();
+            grupe.Show();
+        }
+
+        private void Cadre_buton_Click(object sender, EventArgs e)
+        {
+            Cadre_didactice cadre= new Cadre_didactice();
+            cadre.Show();
+        }
+
     }
 }
