@@ -1,10 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="AdaugareDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdaugareStudGr.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Adaugare_Anii.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Adaugare_Cadru_Didactic.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Adauga_Ciclu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Adauga_Grupa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Adauga_studenti.cs">
@@ -16,16 +28,28 @@
     <Compile Update="An_studiu_stergere.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Cadre_didactice.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Cicluri_inv.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Class1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Discipline.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Grupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Meniu_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Modifica_Grupa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Note_Adaugare.cs">
@@ -43,7 +67,16 @@
     <Compile Update="Programe_Stergere.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Stergere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StergereDiscipline.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Stergere_studenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Sterge_Grupa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Studenti_Main.cs">

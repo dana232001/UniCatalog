@@ -56,7 +56,7 @@ namespace Aplicatie
 
         private void Grupe_buton_Click(object sender, EventArgs e)
         {
-            Grupe grupe = new Grupe();
+            Grupe_main grupe = new Grupe_main();
             grupe.Show();
         }
 
